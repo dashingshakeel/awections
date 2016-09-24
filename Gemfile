@@ -17,7 +17,7 @@ gem 'haml-rails'
 gem "bootstrap-sass"
 gem "autoprefixer-rails"
 gem "devise"
-gem "fay-websocket"
+gem "faye-websocket"
 gem "pry"
 gem "hirb"
 
