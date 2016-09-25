@@ -20,7 +20,17 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
   end
+  def transfer
+    product=Product.find params[:id]
+    if product.auction.ended?
+      product.update_attribute :user_id,product.auction.top_bid.user_id
+      redirect_to product, notice: "successfully"
+    else
+      redirect_to product, alert: "unsuccessfully"
+    end
 
+    
+  end
   # POST /products
   # POST /products.json
   def create
