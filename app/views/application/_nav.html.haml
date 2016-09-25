@@ -1,4 +1,4 @@
-%nav.navbar.navbar-default{:role => "navigation"}
+%nav.navbar.navbar-inverse.navbar-fixed-top
  .container-fluid
   .navbar-header
    %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1","data-toggle" => "collapse", :type => "button"}
@@ -11,3 +11,9 @@
    %ul.nav.navbar-nav
     %li
      =link_to "products", products_path
+   %ul.nav.navbar-nav.navbar-right
+    -if current_user
+     %p.navbar-text
+      =link_to "sign out" , destroy_user_session_path ,method:  :delete
+    -else 
+     %li=link_to  "Sign in", new_user_session_path
