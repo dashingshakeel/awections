@@ -6,6 +6,9 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+you can see project on link below
+
+http://radiant-refuge-57644.herokuapp.com/
 
 * System dependencies
 
